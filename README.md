@@ -104,9 +104,10 @@ make cleanall  # 清除辅助文件与样式文件
 `makedoc.bat`, `makebeamer.bat` and `makeclean.bat` are designed for windows platform. Double click these files, then they will echo corresponding functions automatically.
 
 ```bash
-makedoc     # compile documentation (required before compiling the beamer)
-makebeamer  # compile beamer
-makeclean   # clean auxiliary files
+makedoc       # compile documentation (required before compiling the beamer)
+makebeamer    # compile beamer
+makeclean     # clean auxiliary files
+makecleanall  # clean auxiliary files and style files
 ```
 
 # 使用编译脚本
@@ -114,9 +115,10 @@ makeclean   # clean auxiliary files
 `makedoc.bat`、`makebeamer.bat`与`makeclean.bat`为windows编译脚本，双击即可执行相应的功能。
 
 ```bash
-makedoc     # 编译说明文档（在编译 beamer之前必须编译说明文档）
-makebeamer  # 编译 beamer
-makeclean   # 清除辅助文件
+makedoc       # 编译说明文档（在编译 beamer之前必须编译说明文档）
+makebeamer    # 编译 beamer
+makeclean     # 清除辅助文件
+makecleanall  # 清除辅助文件与样式文件
 ```
 
 # License
