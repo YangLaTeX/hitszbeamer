@@ -248,6 +248,7 @@ This package consists of the file  hitszbeamer.dtx,
 % makedoc.bat & 生成主题与用户手册脚本\\
 % makebeamer.bat & 编译测试样例脚本\\
 % makeclean.bat & 清理编译过程中间文件脚本\\
+% makecleanall.bat & 清理编译过程中间文件与样式文件脚本\\
 % Makefile & Linux \& Mac OS脚本\\
 % \textbf{hitszbeamer.pdf} & 用户手册（本文档）\\
 % \bottomrule
@@ -282,13 +283,16 @@ This package consists of the file  hitszbeamer.dtx,
 % \subsection{论文选项}
 % \label{sec:option}
 %
-% 论文选项在\file{main.tex}文件的开头描述，此处不赘述。
+% 论文选项在\file{main.tex} 文件的开头描述，此处不赘述。
 %
 % \section{使用模板}
 % \subsection{如何编译}\label{SubSec:HowToMake}
 % \subsubsection{Windows用户}
-% 主题项目里已经列出了脚本：\\
-% 首先双击 makedoc.bat 脚本，生成主题和用户手册；然后双击 makebeamer.bat 脚本生成测试 Beamer 文件预览\footnote{如编译后有些索引标志位置不准确，请多编译几次。}；最后双击 makeclean.bat 清理编译过程的中间文件。
+% 主题项目里已经列出了脚本：
+% 首先双击\file{makedoc.bat} 脚本，生成主题和用户手册；
+% 然后双击\file{makebeamer.bat} 脚本生成测试 Beamer 文件预览；
+% 最后双击\file{makeclean.bat} 清理编译过程的中间文件；
+% 双击\file{makecleanall.bat}可以清除辅助文件以及样式文件。
 %
 % \subsubsection{Linux \& Mac OS用户}
 % 首先运行下面命令生成主题和用户手册；
@@ -304,6 +308,11 @@ This package consists of the file  hitszbeamer.dtx,
 % 最后运行下面命令清理编译过程的中间文件。
 % \begin{shell}
 % $ make clean
+% \end{shell}
+%
+% 若运行下面命令则清理编译过程的中间文件以及所有样式文件。
+% \begin{shell}
+% $ make cleanall
 % \end{shell}
 %
 % \section{致谢}
@@ -331,6 +340,7 @@ This package consists of the file  hitszbeamer.dtx,
 \RequirePackage[UTF8]{ctex}
 \RequirePackage[square,sort&compress]{natbib}
 %    \end{macrocode}
+%
 % 主题选项
 %    \begin{macrocode}
 \DeclareOptionBeamer{hitszred}{%
@@ -345,6 +355,7 @@ This package consists of the file  hitszbeamer.dtx,
 }
 \ProcessOptionsBeamer
 %    \end{macrocode}
+%
 % 特殊设置
 %    \begin{macrocode}
 \mode<presentation>
@@ -358,6 +369,7 @@ This package consists of the file  hitszbeamer.dtx,
 %</hitszbeamer>
 %    \end{macrocode}
 % \subsection{主题配色文件部分}
+%
 % 参数设置
 %    \begin{macrocode}
 %<*hitszcolorstyle>
@@ -367,6 +379,7 @@ This package consists of the file  hitszbeamer.dtx,
 
 \def\beamer@hitszcolorred{hitszred}
 %    \end{macrocode}
+%
 % 颜色设置。
 %    \begin{macrocode}
 \mode<presentation>
@@ -408,12 +421,14 @@ This package consists of the file  hitszbeamer.dtx,
 %</hitszcolorstyle>
 %    \end{macrocode}
 % \subsection{内部主题文件部分}
+%
 % 必要宏包
 %    \begin{macrocode}
 %<*hitszinnerstyle>
 \RequirePackage{tikz}
 \usetikzlibrary{external}
 %    \end{macrocode}
+%
 % 参数设置
 %    \begin{macrocode}
 \DeclareOptionBeamer{hitszred}{\def\beamer@hitszcolor{hitszred}}
@@ -423,6 +438,7 @@ This package consists of the file  hitszbeamer.dtx,
 \newlength{\beamer@plainpagewidth}
 \def\beamer@hitszcolorblue{hitszblue}
 %    \end{macrocode}
+%
 % 特殊设置
 %    \begin{macrocode}
 \mode<presentation>
@@ -475,6 +491,7 @@ This package consists of the file  hitszbeamer.dtx,
 %    \begin{macrocode}
 %<*hitszouterstyle>
 %    \end{macrocode}
+%
 % 参数设置
 %    \begin{macrocode}
 \DeclareOptionBeamer{hitszred}{\def\beamer@hitszcolor{hitszred}}
@@ -488,7 +505,10 @@ This package consists of the file  hitszbeamer.dtx,
 \pgfdeclareimage[mask=figmask,width=0.17\linewidth,interpolate=true]{hitlogomasked}{figures/hitlogo.jpg}
 \logo{\pgfuseimage{hitlogomasked}}
 
+% 取消导航符号
 \setbeamertemplate{navigation symbols}{}
+
+% 使用<sidebar>主题
 \useoutertheme[width=0.17\linewidth]{sidebar}
 
 \mode<all>
@@ -505,7 +525,7 @@ This package consists of the file  hitszbeamer.dtx,
 \RequirePackage{newpxmath}
 \RequirePackage[
   top=2.5cm, bottom=2.5cm,
-  left=4cm, right=2cm,
+  left=3cm, right=2cm,
   headsep=8mm]{geometry}
 \RequirePackage{array,longtable,booktabs}
 \RequirePackage{listings}

@@ -5,7 +5,7 @@
 
 # hitszbeamer：哈尔滨工业大学（深圳）Beamer模板
 
-[Github](https://github.com/YangLaTeX/hitszbeamer) | [Download](https://github.com/YangLaTeX/hitszbeamer/releases) | [Wiki](https://github.com/YangLaTeX/hitszbeamer/wiki) | [CTAN](https://www.ctan.org/pkg/hitszbeamer)
+[GitHub](https://github.com/YangLaTeX/hitszbeamer) | [Download](https://github.com/YangLaTeX/hitszbeamer/releases) | [Wiki](https://github.com/YangLaTeX/hitszbeamer/wiki) | [CTAN](https://www.ctan.org/pkg/hitszbeamer)
 
 # Introduction to hitszbeamer
 
@@ -101,7 +101,7 @@ make cleanall  # 清除辅助文件与样式文件
 
 # batch Usage
 
-`makedoc.bat`, `makebeamer.bat` and `makeclean.bat` are designed for windows platform. Double click these files, then they will echo corresponding functions automatically.
+`makedoc.bat`, `makebeamer.bat`, `makeclean.bat` and `makecleanall` are designed for windows platform. Double click these files, then they will echo corresponding functions automatically.
 
 ```bash
 makedoc       # compile documentation (required before compiling the beamer)
@@ -112,7 +112,7 @@ makecleanall  # clean auxiliary files and style files
 
 # 使用编译脚本
 
-`makedoc.bat`、`makebeamer.bat`与`makeclean.bat`为windows编译脚本，双击即可执行相应的功能。
+`makedoc.bat`、`makebeamer.bat`、`makeclean.bat`与`makecleanall`为windows编译脚本，双击即可执行相应的功能。
 
 ```bash
 makedoc       # 编译说明文档（在编译 beamer之前必须编译说明文档）

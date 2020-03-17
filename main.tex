@@ -1,20 +1,51 @@
+%%=======================================================================
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = PdfLaTeX
+%%=======================================================================
+% 模板名称：hitszbeamer
+% 模板版本：V1.0.0
+% 模板作者：杨敬轩（Jingxuan Yang）
+% 联系作者：yangjingxuan@stu.hit.edu.cn & yanglatex2e@gmail.com
+% 模板交流：QQ群：1039392552，加群请备注LaTeX、hitszthesis相关说明
+% 模板适用：哈尔滨工业大学（深圳）Beamer模板
+% 模板编译：手动编译方法参看 README.md 或 hitszbeamer.pdf
+%          编译beamer之前必须编译说明文档：make doc 或双击 makedoc.bat
+%          编译说明文档同时分离出四个样式文件 *hitszbeamer.sty
+%          GNU make 工具：make beamer
+%          Windows批处理脚本：双击 makebeamer.bat 自动编译论文
+%          更多编译细节详见说明文档：hitszbeamer.pdf
+% 更新时间：2020/03/17
+% 模板帮助：请**务必务必务必**阅读 hitszbeamer.pdf 说明文档，文档查看方法：
+%          下载模板文件夹里就有，如果是从CTAN上安装更新本模板，则通过
+%          cmd 命令行：texdoc hitszbeamer
+%          推荐前往模板的 GitHub 仓库获取最新文件，地址：
+%          https://github.com/YangLaTeX/hitszbeamer
+%%=======================================================================
+
+% 设置文档类别为 <beamer>，<compress>选项含义为尽量压缩导航栏
 \documentclass[compress]{beamer}
 
+% 使用 <hitszbeamer> 主题
 \usetheme{hitszbeamer}
 
+% 开始写文章
 \begin{document}
 
+% 图片存放路径
 \graphicspath{{figures/}}
 
+% 封面信息
 \title[报告标题]{报告标题\\[2mm] 中期答辩}
 \author[杨敬轩]{学生：杨敬轩\\[5mm] 导师：XX\ 教授}
 \institute[哈尔滨工业大学（深圳）]{\small  哈尔滨工业大学（深圳）}
 \date{\small \vskip -10pt \today}
 
+% 标题页
 \begin{frame}
 		\maketitle
 \end{frame}
 
+% 目录页
 \section*{目录}
 \frame{
   \frametitle{\secname}
@@ -160,4 +191,5 @@
 	\end{center}
 \end{frame}
 
+% 结束文档撰写
 \end{document}
