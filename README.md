@@ -5,6 +5,11 @@
 
 # hitszbeamer：哈尔滨工业大学（深圳）Beamer模板
 
+![CTAN Version](https://img.shields.io/ctan/v/hitszbeamer.svg)
+![GitHub Version](https://img.shields.io/github/release/YangLaTeX/hitszbeamer.svg)
+![Repo Size](https://img.shields.io/github/repo-size/YangLaTeX/hitszbeamer.svg)
+![License](https://img.shields.io/ctan/l/hitszbeamer.svg)
+
 [GitHub](https://github.com/YangLaTeX/hitszbeamer) | [Download](https://github.com/YangLaTeX/hitszbeamer/releases) | [Wiki](https://github.com/YangLaTeX/hitszbeamer/wiki) | [CTAN](https://www.ctan.org/pkg/hitszbeamer)
 
 # Introduction to hitszbeamer
