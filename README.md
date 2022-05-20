@@ -14,7 +14,7 @@
 
 # Introduction to hitszbeamer
 
-**hitszbeamer** is a **beamer theme** designed for Harbin Institute of Technology, ShenZhen (HITSZ). Current version is 1.0.0, updated on 2020/03/17.
+**hitszbeamer** is a **beamer theme** designed for Harbin Institute of Technology, ShenZhen (HITSZ). Current version is 1.1.0, updated on 2022/05/20.
 
 ```latex
   |- figures
@@ -36,7 +36,7 @@
 
 # hitszbeamer简介
 
-hitszbeamer是哈尔滨工业大学（深圳）Beamer模板，当前版本1.0.0，更新于2020年03月17日。
+hitszbeamer是哈尔滨工业大学（深圳）Beamer模板，当前版本1.1.0，更新于2022年05月20日。
 
 # Documentation
 

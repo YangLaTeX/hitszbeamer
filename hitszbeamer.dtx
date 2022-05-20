@@ -2,7 +2,7 @@
 % !TeX program  = XeLaTeX
 % !TeX encoding = UTF-8
 %
-% Copyright (C) 2019--2020 by Jingxuan Yang <yanglatex2e@gmail.com>
+% Copyright (C) 2019--2022 by Jingxuan Yang <yanglatex2e@gmail.com>
 %
 % This file may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3c
@@ -108,10 +108,10 @@ This package consists of the file  hitszbeamer.dtx,
 %<hitszcolorstyle>\ProvidesPackage{beamercolorthemehitszbeamer}
 %<hitszinnerstyle>\ProvidesPackage{beamerinnerthemehitszbeamer}
 %<hitszouterstyle>\ProvidesPackage{beamerouterthemehitszbeamer}
-%<hitszbeamer|hitszcolorstyle|hitszinnerstyle|hitszouterstyle>[2020/03/17 v1.0.0 A Beamer Theme for Harbin Institute of Technology, ShenZhen (HITSZ)]
+%<hitszbeamer|hitszcolorstyle|hitszinnerstyle|hitszouterstyle>[2022/05/20 v1.1.0 A Beamer Theme for Harbin Institute of Technology, ShenZhen (HITSZ)]
 %
 %<*driver>
-\ProvidesFile{hitszbeamer.dtx}[2020/03/17 v1.0.0 A Beamer Theme for Harbin Institute of Technology, ShenZhen (HITSZ)]
+\ProvidesFile{hitszbeamer.dtx}[2022/05/20 v1.1.0 A Beamer Theme for Harbin Institute of Technology, ShenZhen (HITSZ)]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -233,7 +233,9 @@ This package consists of the file  hitszbeamer.dtx,
 % \subsection{模板的组成}
 % 下表列出了 \hitszbeamer{}\ 的主要文件及其功能介绍：
 %
-% \begin{longtable}{l|p{8cm}}
+% \changes{v1.1.0}{2022/05/20}{omit vertical rules}
+%
+% \begin{longtable}{lp{8cm}}
 % \toprule
 % {\heiti 文件（夹）} & {\heiti 功能描述}\\\midrule
 % \endfirsthead
@@ -515,13 +517,29 @@ This package consists of the file  hitszbeamer.dtx,
 %</hitszouterstyle>
 %    \end{macrocode}
 %
+% \changes{v1.1.0}{2022/05/20}{fix \pkg{newpxtext} bug}
 % \iffalse
 %    \begin{macrocode}
 %<*dtx-style>
 \ProvidesPackage{dtx-style}
 \RequirePackage{hypdoc}
 \RequirePackage[UTF8,scheme=chinese,fontset=windowsnew]{ctex}
-\RequirePackage{newpxtext}
+% \RequirePackage{newpxtext}
+\setmainfont{TeXGyrePagellaX}[
+  Extension   = .otf,
+  UprightFont = *-Regular,
+  BoldFont    = *-Bold,
+  ItalicFont  = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+]
+\setsansfont{IBMPlexSansCondensed}[%
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]
+\setmonofont{CMU Typewriter Text}
 \RequirePackage{newpxmath}
 \RequirePackage[
   top=2.5cm, bottom=2.5cm,
